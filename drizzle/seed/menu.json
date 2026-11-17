@@ -1,0 +1,2411 @@
+{
+  "currency": "YER",
+  "branchScope": "dream-city-main",
+  "categories": [
+    {
+      "number": 1,
+      "key": "beverages",
+      "name": "المشروبات الساخنة والباردة",
+      "stations": [
+        "beverages"
+      ],
+      "items": [
+        {
+          "id": "beverages-001",
+          "name": "كوكاكولا",
+          "priceYER": 250,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-002",
+          "name": "حبة ماء",
+          "priceYER": 100,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-003",
+          "name": "ماء شملان",
+          "priceYER": 150,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-004",
+          "name": "شراب ديليسي",
+          "priceYER": 200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-005",
+          "name": "مشروب غازي",
+          "priceYER": 250,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-006",
+          "name": "كندا دراي",
+          "priceYER": 250,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-007",
+          "name": "شراب كينترا",
+          "priceYER": 250,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-008",
+          "name": "شاهي أحمر سكبة",
+          "priceYER": 100,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-009",
+          "name": "شاي أحمر ليبتون",
+          "priceYER": 100,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-010",
+          "name": "شاي حليب",
+          "priceYER": 200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-011",
+          "name": "قهوة بن",
+          "priceYER": 100,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-012",
+          "name": "قهوة حليب",
+          "priceYER": 200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-013",
+          "name": "قهوة زنجبيل",
+          "priceYER": 150,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-014",
+          "name": "نسكافيه",
+          "priceYER": 300,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "beverages-015",
+          "name": "نسكافيه حليب",
+          "priceYER": 400,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "key": "juices",
+      "name": "العصائر الطبيعية",
+      "stations": [
+        "beverages"
+      ],
+      "items": [
+        {
+          "id": "juices-001",
+          "name": "عصير جزر",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-002",
+          "name": "عصير ليمون",
+          "priceYER": 200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-003",
+          "name": "عصير ليمون بالنعناع",
+          "priceYER": 300,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-004",
+          "name": "عصير برتقال",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-005",
+          "name": "عصير برتقال كبس",
+          "priceYER": 2000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-006",
+          "name": "مانجو مركز",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-007",
+          "name": "مانجو طبيعي",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-008",
+          "name": "عصير أناناس عادي",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-009",
+          "name": "عصير أناناس طبيعي",
+          "priceYER": 800,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-010",
+          "name": "عصير موز بالحليب",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-011",
+          "name": "عصير عمباء",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-012",
+          "name": "عصير تفاح",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-013",
+          "name": "عصير شمام",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-014",
+          "name": "عصير جوافة",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-015",
+          "name": "عصير عنب",
+          "priceYER": 600,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-016",
+          "name": "عصير رمان",
+          "priceYER": 600,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-017",
+          "name": "عصير مشكل فواكه",
+          "priceYER": 600,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-018",
+          "name": "عصير زنجبيل",
+          "priceYER": 400,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-019",
+          "name": "عصير أفوكادو",
+          "priceYER": 1200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-020",
+          "name": "عصير كيوي",
+          "priceYER": 800,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-021",
+          "name": "عصير فراولة",
+          "priceYER": 700,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-022",
+          "name": "عصير فخفخينا",
+          "priceYER": 1000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-023",
+          "name": "عصير كوكتيل دريم",
+          "priceYER": 600,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-024",
+          "name": "عصير طبقات دريم",
+          "priceYER": 600,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-025",
+          "name": "عصير مكسرات",
+          "priceYER": 800,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-026",
+          "name": "طبق فواكه",
+          "priceYER": 1500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-027",
+          "name": "عصير عرائسي",
+          "priceYER": 1000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-028",
+          "name": "جاك ليم",
+          "priceYER": 1000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-029",
+          "name": "جاك برتقال",
+          "priceYER": 2000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-030",
+          "name": "جاك ليم بالنعناع",
+          "priceYER": 1200,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-031",
+          "name": "عصير عوار قلب",
+          "priceYER": 700,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-032",
+          "name": "عصير بطيخ",
+          "priceYER": 500,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "juices-033",
+          "name": "صحن فواكه",
+          "priceYER": 1000,
+          "station": "beverages",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "key": "salads",
+      "name": "السلطات والمقبلات",
+      "stations": [
+        "salad"
+      ],
+      "items": [
+        {
+          "id": "salads-001",
+          "name": "نفر سلطة دريم",
+          "priceYER": 2000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-002",
+          "name": "نص نفر سلطة دريم",
+          "priceYER": 1000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-003",
+          "name": "سلطة شرائح",
+          "priceYER": 300,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-004",
+          "name": "سلطة عرائسي",
+          "priceYER": 900,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-005",
+          "name": "سلطة حارة",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-006",
+          "name": "سلطة عربي",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-007",
+          "name": "سلطة فتوش",
+          "priceYER": 600,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-008",
+          "name": "سلطة فواكه",
+          "priceYER": 1000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-009",
+          "name": "سلطة بالجبن",
+          "priceYER": 600,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-010",
+          "name": "سلطة زبادي",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-011",
+          "name": "سلطة بالتونة",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-012",
+          "name": "سلطة مايونيز",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-013",
+          "name": "سلطة ناعم",
+          "priceYER": 400,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-014",
+          "name": "حمص",
+          "priceYER": 600,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-015",
+          "name": "متبل",
+          "priceYER": 600,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-016",
+          "name": "حمص مع متبل",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-017",
+          "name": "تبولة",
+          "priceYER": 600,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-018",
+          "name": "ورق عنب",
+          "priceYER": 1000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-019",
+          "name": "طبق مخللات",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-020",
+          "name": "بابا غنوج",
+          "priceYER": 1000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-021",
+          "name": "زيتون حبوب",
+          "priceYER": 200,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-022",
+          "name": "زبادي",
+          "priceYER": 200,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-023",
+          "name": "سحاوق جبن",
+          "priceYER": 300,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-024",
+          "name": "سحاوق جبن مركز",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-025",
+          "name": "سحاوق عادي",
+          "priceYER": 200,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-026",
+          "name": "حمص مع الفول",
+          "priceYER": 1000,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-027",
+          "name": "سحاوق جبن فحسة",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-028",
+          "name": "جبن مالح 100 جرام",
+          "priceYER": 300,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-029",
+          "name": "سلطة ذرة",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-030",
+          "name": "سلطة يوناني",
+          "priceYER": 700,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-031",
+          "name": "نفر شيبس",
+          "priceYER": 500,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-032",
+          "name": "علبة ثوم",
+          "priceYER": 300,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "salads-033",
+          "name": "علبة صوص",
+          "priceYER": 300,
+          "station": "salad",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "key": "mains",
+      "name": "الطبخ والوجبات الرئيسية",
+      "stations": [
+        "hot"
+      ],
+      "items": [
+        {
+          "id": "mains-001",
+          "name": "حبة دجاج شواية",
+          "priceYER": 2200,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-002",
+          "name": "نص دجاج شواية",
+          "priceYER": 1100,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-003",
+          "name": "ربع دجاج شواية",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-004",
+          "name": "حبة دجاج فحم",
+          "priceYER": 2400,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-005",
+          "name": "نص دجاج فحم",
+          "priceYER": 1200,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-006",
+          "name": "ربع دجاج فحم",
+          "priceYER": 650,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-007",
+          "name": "حبة دجاج مسلوق",
+          "priceYER": 2200,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-008",
+          "name": "نص دجاج مسلوق",
+          "priceYER": 1100,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-009",
+          "name": "ربع دجاج مسلوق",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-010",
+          "name": "حبة دجاج حنيد",
+          "priceYER": 2400,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-011",
+          "name": "نص دجاج حنيد",
+          "priceYER": 1200,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-012",
+          "name": "حبة دجاج مضغوط",
+          "priceYER": 4000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-013",
+          "name": "نص دجاج مضغوط",
+          "priceYER": 2000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-014",
+          "name": "ربع دجاج مضغوط",
+          "priceYER": 1300,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-015",
+          "name": "حبة دجاج برياني مع الأرز",
+          "priceYER": 4000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-016",
+          "name": "نص دجاج برياني مع الأرز",
+          "priceYER": 2000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-017",
+          "name": "رأس غنم",
+          "priceYER": 1000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-018",
+          "name": "لحم مضغوط",
+          "priceYER": 5600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-019",
+          "name": "وصلة لحم حنيد",
+          "priceYER": 5000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-020",
+          "name": "برمة لحم",
+          "priceYER": 5000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-021",
+          "name": "لحم مزموم",
+          "priceYER": 5000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-022",
+          "name": "ذبيحة كامل مع الأرز",
+          "priceYER": 70000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-023",
+          "name": "نص ذبيحة مع الأرز",
+          "priceYER": 35000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-024",
+          "name": "ربع ذبيحة مع الأرز",
+          "priceYER": 17500,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-025",
+          "name": "ربع ذبيحة صافي",
+          "priceYER": 15000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-026",
+          "name": "نفر أرز بشاور",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-027",
+          "name": "نفر أرز برياني",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-028",
+          "name": "نفر أرز مضغوط",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-029",
+          "name": "مقلوبة نص دجاج",
+          "priceYER": 2500,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-030",
+          "name": "مقلوبة حبة دجاج",
+          "priceYER": 5000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-031",
+          "name": "مرق",
+          "priceYER": 100,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-032",
+          "name": "طباخة لحم بالكيلو",
+          "priceYER": 1000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-033",
+          "name": "مشكل فروم",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-034",
+          "name": "مشكل عادي",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-035",
+          "name": "مجموع مشكل خضار",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-036",
+          "name": "هوري مشكل",
+          "priceYER": 1000,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-037",
+          "name": "محشي",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-038",
+          "name": "مسقع",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-039",
+          "name": "ملوخية",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-040",
+          "name": "بامية",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-041",
+          "name": "شعيرية",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-042",
+          "name": "مكرونة",
+          "priceYER": 600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-043",
+          "name": "مكرونة بشاميل",
+          "priceYER": 700,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-044",
+          "name": "شوربة",
+          "priceYER": 500,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-045",
+          "name": "شفوت",
+          "priceYER": 500,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-046",
+          "name": "حبة بروست دجاج",
+          "priceYER": 5200,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-047",
+          "name": "نص بروست دجاج",
+          "priceYER": 2600,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "mains-048",
+          "name": "ربع بروست دجاج",
+          "priceYER": 1300,
+          "station": "hot",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "key": "grill_fry",
+      "name": "المشويات والوجبات السريعة",
+      "stations": [
+        "grill",
+        "fry"
+      ],
+      "items": [
+        {
+          "id": "grill_fry-001",
+          "name": "طبق شاورما",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-002",
+          "name": "سندوتش شاورما عادي",
+          "priceYER": 500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-003",
+          "name": "سندوتش شاورما عربي",
+          "priceYER": 800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-004",
+          "name": "سندوتش شاورما بان",
+          "priceYER": 600,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-005",
+          "name": "طبق شاورما عربي",
+          "priceYER": 2200,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-006",
+          "name": "طبق شاورما سبيشل",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-007",
+          "name": "فطائر شاورما",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-008",
+          "name": "طبق كوكتيل مشاوي دريم",
+          "priceYER": 20000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-009",
+          "name": "نص طبق كوكتيل مشاوي دريم",
+          "priceYER": 10000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-010",
+          "name": "دجاج مسحب",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-011",
+          "name": "كباب لحم بلدي",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-012",
+          "name": "أوصال لحم بلدي",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-013",
+          "name": "كباب دجاج",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-014",
+          "name": "مارينا لحم عرائسي",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-015",
+          "name": "مارينا دجاج عرائسي",
+          "priceYER": 1400,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-016",
+          "name": "دجاج فروج",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-017",
+          "name": "شيش دجاج",
+          "priceYER": 1800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-018",
+          "name": "مبشور مشاوي",
+          "priceYER": 5000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-019",
+          "name": "إسكالوب",
+          "priceYER": 1300,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-020",
+          "name": "مشكل مشاوي",
+          "priceYER": 5000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-021",
+          "name": "ريش لحم",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-022",
+          "name": "مشكل مشاوي صغير",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-023",
+          "name": "نفر ديرك بروست",
+          "priceYER": 3000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-024",
+          "name": "نفر ديرك فحم",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-025",
+          "name": "عقدة سمك",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-026",
+          "name": "طبق بحري بروست",
+          "priceYER": 16000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-027",
+          "name": "نص طبق بحري بروست",
+          "priceYER": 8000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-028",
+          "name": "نفر ديرك موفي",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-029",
+          "name": "سمك ديرك 1 كجم",
+          "priceYER": 8000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-030",
+          "name": "سمك ديرك نص كجم",
+          "priceYER": 4000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-031",
+          "name": "جمبري نص كجم",
+          "priceYER": 4000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-032",
+          "name": "بيتزا خضار كبير",
+          "priceYER": 3500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-033",
+          "name": "بيتزا خضار وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-034",
+          "name": "بيتزا خضار صغير",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-035",
+          "name": "بيتزا مارجريتا كبير",
+          "priceYER": 3200,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-036",
+          "name": "بيتزا مارجريتا وسط",
+          "priceYER": 2200,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-037",
+          "name": "بيتزا مارجريتا صغير",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-038",
+          "name": "بيتزا تشيكن كبير",
+          "priceYER": 3800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-039",
+          "name": "بيتزا تشيكن وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-040",
+          "name": "بيتزا تشيكن صغير",
+          "priceYER": 1900,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-041",
+          "name": "بيتزا لحم كبير",
+          "priceYER": 3800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-042",
+          "name": "بيتزا لحم وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-043",
+          "name": "بيتزا لحم صغير",
+          "priceYER": 1900,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-044",
+          "name": "بيتزا تونا كبير",
+          "priceYER": 3800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-045",
+          "name": "بيتزا تونا وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-046",
+          "name": "بيتزا تونا صغير",
+          "priceYER": 1900,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-047",
+          "name": "بيتزا جمبريتا كبير",
+          "priceYER": 3800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-048",
+          "name": "بيتزا جمبريتا وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-049",
+          "name": "بيتزا جمبريتا صغير",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-050",
+          "name": "بيتزا نقانق كبير",
+          "priceYER": 3800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-051",
+          "name": "بيتزا نقانق وسط",
+          "priceYER": 2800,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-052",
+          "name": "بيتزا نقانق صغير",
+          "priceYER": 1900,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-053",
+          "name": "بيتزا الفصول الأربعة",
+          "priceYER": 4000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-054",
+          "name": "بيتزا شاو",
+          "priceYER": 3000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-055",
+          "name": "صحن معجنات",
+          "priceYER": 500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-056",
+          "name": "فطائر خضار",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-057",
+          "name": "كرواسون أقماع",
+          "priceYER": 300,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-058",
+          "name": "فطائر أجبان",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-059",
+          "name": "فطائر دجاج",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-060",
+          "name": "فطائر لحم",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-061",
+          "name": "فطائر تونة",
+          "priceYER": 1500,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-062",
+          "name": "مناقيش زعتر",
+          "priceYER": 1000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-063",
+          "name": "مناقيش زعتر مع الجبن",
+          "priceYER": 1200,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-064",
+          "name": "برجر دجاج",
+          "priceYER": 1000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-065",
+          "name": "برجر لحم",
+          "priceYER": 1000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-066",
+          "name": "سندوتش فاهيتا",
+          "priceYER": 1300,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-067",
+          "name": "سندوتش زنجر",
+          "priceYER": 1300,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-068",
+          "name": "طبق فاهيتا دجاج",
+          "priceYER": 1700,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-069",
+          "name": "طبق فاهيتا لحم",
+          "priceYER": 2000,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-070",
+          "name": "طبق زنجر جبن",
+          "priceYER": 2000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-071",
+          "name": "طبق أصابع دجاج",
+          "priceYER": 1500,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-072",
+          "name": "طبق مكسيكانا",
+          "priceYER": 1600,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-073",
+          "name": "زنجر برجر",
+          "priceYER": 1000,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-074",
+          "name": "زنجر برجر دبل",
+          "priceYER": 1500,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-075",
+          "name": "برجر دجاج دبل",
+          "priceYER": 1500,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-076",
+          "name": "برجر لحم دبل",
+          "priceYER": 1600,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-077",
+          "name": "كرسبي رول",
+          "priceYER": 1300,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-078",
+          "name": "كرسبي برجر",
+          "priceYER": 1300,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-079",
+          "name": "تشكن فرايز",
+          "priceYER": 1500,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-080",
+          "name": "زوايا مقرمشة",
+          "priceYER": 1500,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-081",
+          "name": "بان برجر",
+          "priceYER": 100,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-082",
+          "name": "بان شاورما",
+          "priceYER": 100,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-083",
+          "name": "خبز عربي",
+          "priceYER": 50,
+          "station": "grill",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "grill_fry-084",
+          "name": "بان برجر طلبات",
+          "priceYER": 80,
+          "station": "fry",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "key": "desserts",
+      "name": "الحلويات والمعجنات والآيس كريم",
+      "stations": [
+        "desserts"
+      ],
+      "items": [
+        {
+          "id": "desserts-001",
+          "name": "آيس كريم صاج كندر ميلك",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-002",
+          "name": "آيس كريم صاج كندر بوينو",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-003",
+          "name": "آيس كريم صاج أوريو",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-004",
+          "name": "آيس كريم صاج نوتيلا",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-005",
+          "name": "آيس كريم صاج سنيكرز/يونكرز",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-006",
+          "name": "آيس كريم صاج بريك",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-007",
+          "name": "آيس كريم صاج سعيد",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-008",
+          "name": "تريليتشا كاسات",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-009",
+          "name": "تشيز كيك كاسات",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-010",
+          "name": "صحن رواني",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-011",
+          "name": "بودنغ",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-012",
+          "name": "كراميل",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-013",
+          "name": "آيس كريم بنكهة الفراولة كبير",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-014",
+          "name": "آيس كريم بنكهة الشوكولاتة صغير",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-015",
+          "name": "آيس كريم بنكهة الشوكولاتة وسط",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-016",
+          "name": "آيس كريم بنكهة الشوكولاتة كبير",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-017",
+          "name": "آيس كريم سوفت أوريو كبير",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-018",
+          "name": "آيس كريم فراولة طبيعي",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-019",
+          "name": "آيس كريم سبيشل دريم",
+          "priceYER": 2000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-020",
+          "name": "آيس كريم صاج جالكسي",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-021",
+          "name": "آيس كريم صاج سنيكرز",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-022",
+          "name": "آيس كريم صاج تويكس",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-023",
+          "name": "آيس كريم صاج فليك",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-024",
+          "name": "آيس كريم صاج كت كات",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-025",
+          "name": "قطعة شوكليت كيك",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-026",
+          "name": "قطعة كراميل كيك",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-027",
+          "name": "قطعة فراولة كيك",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-028",
+          "name": "قطعة تارت شوكليت مثلث",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-029",
+          "name": "قطعة تارت شوكليت مدور",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-030",
+          "name": "قطعة تارت فواكه مدور",
+          "priceYER": 700,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-031",
+          "name": "قطعة كاروت كيك",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-032",
+          "name": "بيتفور ربع كجم",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-033",
+          "name": "بيتفور نص كجم",
+          "priceYER": 2000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-034",
+          "name": "بيتفور 1 كجم",
+          "priceYER": 4000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-035",
+          "name": "آيس كريم بنكهة الفراولة صغير",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-036",
+          "name": "آيس كريم بنكهة الفراولة وسط",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-037",
+          "name": "بلح الشام - طرمبة",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-038",
+          "name": "زنود الست",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-039",
+          "name": "كب كيك",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-040",
+          "name": "كب كريمة",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-041",
+          "name": "قطعة بسبوسة بالشوكولاتة",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-042",
+          "name": "قطعة بسبوسة بالقشطة",
+          "priceYER": 200,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-043",
+          "name": "قطعة بسبوسة بالمكسرات",
+          "priceYER": 200,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-044",
+          "name": "قطعة تشيز كيك فراولة",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-045",
+          "name": "قطعة تشيز كيك أوريو",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-046",
+          "name": "قطعة تشيز كيك لوتس",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-047",
+          "name": "قطعة بلاك فورست",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-048",
+          "name": "قطعة وايت فورست",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-049",
+          "name": "قطعة أبل باي",
+          "priceYER": 800,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-050",
+          "name": "تريليتشا",
+          "priceYER": 600,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-051",
+          "name": "قطعة إكلير",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-052",
+          "name": "بقلاوة متنوع نص كجم",
+          "priceYER": 4000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-053",
+          "name": "بقلاوة متنوع 1 كجم",
+          "priceYER": 8000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-054",
+          "name": "بقلاوة متنوع ثمن كجم",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-055",
+          "name": "بقلاوة متنوع ربع كجم",
+          "priceYER": 2000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-056",
+          "name": "صحن بقلاوة متنوع",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-057",
+          "name": "قطعة كنافة عش البلبل",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-058",
+          "name": "قطعة كنافة بالشوكولاتة",
+          "priceYER": 200,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-059",
+          "name": "قطعة كنافة باللوز",
+          "priceYER": 200,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-060",
+          "name": "كنافة أقماع بالنوتيلا",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-061",
+          "name": "كنافة بالنوتيلا",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-062",
+          "name": "كنافة",
+          "priceYER": 700,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-063",
+          "name": "تورتة صغير",
+          "priceYER": 6000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-064",
+          "name": "تورتة وسط",
+          "priceYER": 8000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-065",
+          "name": "تورتة كبير",
+          "priceYER": 12000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-066",
+          "name": "تورتة",
+          "priceYER": 3000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-067",
+          "name": "قطعة جاتوه شوكولاتة مربع",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-068",
+          "name": "قطعة جاتوه فانيليا مربع",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-069",
+          "name": "قطعة جاتوه فراولة مربع",
+          "priceYER": 500,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-070",
+          "name": "قطعة سويس رول",
+          "priceYER": 700,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-071",
+          "name": "قطعة ريد فيلفيت",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-072",
+          "name": "قطعة سوس كيك",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-073",
+          "name": "سمبوسة بالدقة",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-074",
+          "name": "سمبوسة بالجبن",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-075",
+          "name": "تمر",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-076",
+          "name": "قطعة رواني",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-077",
+          "name": "باجية",
+          "priceYER": 100,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-078",
+          "name": "قشطوطة",
+          "priceYER": 1000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-079",
+          "name": "خدمات إضافية",
+          "priceYER": 5000,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        },
+        {
+          "id": "desserts-080",
+          "name": "مهلبية",
+          "priceYER": 300,
+          "station": "desserts",
+          "stock": null,
+          "isAvailable": true
+        }
+      ]
+    }
+  ]
+}

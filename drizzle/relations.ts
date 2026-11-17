@@ -1,0 +1,12 @@
+import { relations } from "drizzle-orm";
+import { branches, users, categories, menuItems, inventoryItems, orders, orderItems, shifts, expenses, cashBoxes, journalEntries, driverLocations, returnOrders } from "./schema";
+export const branchesRelations=relations(branches,({many})=>({users:many(users),menuItems:many(menuItems),orders:many(orders),inventoryItems:many(inventoryItems),shifts:many(shifts)}));
+export const usersRelations=relations(users,({one,many})=>({branch:one(branches,{fields:[users.branchId],references:[branches.id]}),orders:many(orders),shifts:many(shifts),locations:many(driverLocations)}));
+export const categoriesRelations=relations(categories,({many})=>({items:many(menuItems)}));
+export const menuItemsRelations=relations(menuItems,({one,many})=>({branch:one(branches,{fields:[menuItems.branchId],references:[branches.id]}),category:one(categories,{fields:[menuItems.categoryId],references:[categories.id]}),inventory:one(inventoryItems,{fields:[menuItems.inventoryItemId],references:[inventoryItems.id]}),orderItems:many(orderItems)}));
+export const ordersRelations=relations(orders,({one,many})=>({branch:one(branches,{fields:[orders.branchId],references:[branches.id]}),customer:one(users,{fields:[orders.userId],references:[users.id]}),items:many(orderItems),returns:many(returnOrders)}));
+export const orderItemsRelations=relations(orderItems,({one})=>({order:one(orders,{fields:[orderItems.orderId],references:[orders.id]}),menuItem:one(menuItems,{fields:[orderItems.menuItemId],references:[menuItems.id]})}));
+export const inventoryRelations=relations(inventoryItems,({one,many})=>({branch:one(branches,{fields:[inventoryItems.branchId],references:[branches.id]}),menuItems:many(menuItems)}));
+export const shiftsRelations=relations(shifts,({one,many})=>({branch:one(branches,{fields:[shifts.branchId],references:[branches.id]}),user:one(users,{fields:[shifts.userId],references:[users.id]}),expenses:many(expenses)}));
+export const cashBoxesRelations=relations(cashBoxes,({one,many})=>({branch:one(branches,{fields:[cashBoxes.branchId],references:[branches.id]}),entries:many(journalEntries)}));
+export const locationsRelations=relations(driverLocations,({one})=>({driver:one(users,{fields:[driverLocations.driverId],references:[users.id]}),branch:one(branches,{fields:[driverLocations.branchId],references:[branches.id]})}));

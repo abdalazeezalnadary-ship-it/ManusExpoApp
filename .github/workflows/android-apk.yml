@@ -1,0 +1,51 @@
+name: Android APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck and tests
+        run: |
+          pnpm check
+          pnpm test
+
+      - name: Validate Expo project and bundle
+        run: |
+          node -e "const p=require('./app.json').expo; if (!p.extra?.eas?.projectId) { console.error('Link EAS once and commit extra.eas.projectId to app.json before running this workflow.'); process.exit(1); }"
+          pnpm exec expo export --platform android
+
+      - name: Require Expo token
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "Add EXPO_TOKEN as a GitHub repository secret; do not put it in source." >&2
+            exit 1
+          fi
+
+      - name: Build internal APK
+        run: pnpm dlx eas-cli@latest build --platform android --profile preview --non-interactive --wait
