@@ -6,15 +6,15 @@
 
 المشروع مربوط بالفعل بحساب Expo `abdalazeezalnadary` ومعرّف EAS محفوظ في `app.json`. تهيئة Android للـEAS نجحت وجرى التحقق من profile `preview`.
 
-أنشئ Personal Access Token من [Expo Access tokens](https://expo.dev/settings/access-tokens)، وفعّل **Limit access** للحساب الشخصي الذي يملك المشروع بدور **Developer**. هذه الصلاحية تكفي لإنشاء builds وإدارة بيانات البناء، والرمز نفسه يظل سرياً؛ لا تلصقه في Git أو المحادثة أو سجلات العمل. أضفه في GitHub تحت **Settings → Secrets and variables → Actions** باسم `EXPO_TOKEN`.
+أنشئ Personal Access Token من [Expo Access tokens](https://expo.dev/settings/access-tokens)، وفعّل **Limit access** للحساب الشخصي الذي يملك المشروع بدور **Developer**. راجع [وثائق Expo للتوكنات والصلاحيات](https://docs.expo.dev/accounts/programmatic-access/)؛ الرمز سري ويجب عدم لصقه في Git أو المحادثة أو سجلات العمل. أضفه في GitHub تحت **Settings → Secrets and variables → Actions** باسم `EXPO_TOKEN`.
 
-لا يوجد حالياً API عام منشور لهذا المستودع. بعد نشر الـAPI وقاعدة البيانات على HTTPS، أضف عنوان API الأساسي كـGitHub repository variable باسم `EXPO_PUBLIC_API_URL`. عنوان API قيمة عامة تُضمّن في التطبيق، وليس مفتاح اعتماد. يتحقق الـworkflow من استجابة `https://<host>/api/health`، ثم يزامن القيمة إلى متغير EAS `preview` من النوع `plaintext` قبل طلب البناء. لا تستخدم `localhost` أو `10.0.2.2` لهاتف فعلي.
+تم العثور على API Manus الحالي؛ استجاب `/api/health` بـ200 وأعاد استعلام المنيو 293 صنفاً قراءةً فقط. عنوانه تحويل لبيئة تطوير وليس استضافة إنتاج ثابتة، وقد يتوقف عند خمول الـSandbox. ضُبط متغير EAS `preview` باسم `EXPO_PUBLIC_API_URL` على هذا العنوان المؤقت. عنوان API قيمة عامة مضمّنة في التطبيق، وليس مفتاح اعتماد؛ راجع [وثائق متغيرات EAS](https://docs.expo.dev/eas/environment-variables/). للاستخدام طويل الأمد، انشر API وقاعدة البيانات على عنوان HTTPS ثابت ثم حدّث المتغير باستخدام `eas env:set --environment preview --name EXPO_PUBLIC_API_URL --value <HTTPS_URL> --type string --visibility plaintext`.
 
 ## تشغيل البناء
 
-بعد إضافة `EXPO_TOKEN` كـSecret و`EXPO_PUBLIC_API_URL` كـVariable، افتح **Actions → Android APK → Run workflow** على الفرع `main`. يتحقق سير العمل من TypeScript والاختبارات، ومن عنوان API وفحص صحته، ثم يزامنه إلى EAS ويطلق بناء `preview` الداخلي. يعرض EAS رابط صفحة البناء وAPK فقط عند النجاح. افتح رابط APK على الهاتف، نزّل الملف، واسمح بالتثبيت من المتصفح عند طلب Android ذلك.
+بعد إضافة `EXPO_TOKEN` كـSecret، افتح **Actions → Android APK → Run workflow** على الفرع `main`. يتحقق سير العمل من TypeScript والاختبارات، ويقرأ متغير `preview` من EAS ويتأكد من صحة `EXPO_PUBLIC_API_URL` واستجابة `/api/health` قبل إطلاق بناء `preview` الداخلي. يعرض EAS رابط صفحة البناء وAPK فقط عند النجاح. افتح رابط APK على الهاتف، نزّل الملف، واسمح بالتثبيت من المتصفح عند طلب Android ذلك.
 
-لم يبدأ بناء APK بعد لأن عنوان API العام وGitHub Secret لم يجهزا. لم تحفظ مفاتيح توقيع Android في المصدر؛ يتولى EAS إعداد بيانات التوقيع عند البناء.
+لم يبدأ بناء APK بعد لأن تعذر التحقق من وجود GitHub Secret بسبب صلاحية الموصل، كما أن عنوان API الحالي مؤقت. لم تحفظ مفاتيح توقيع Android في المصدر؛ يتولى EAS إعداد بيانات التوقيع عند البناء.
 
 ## المصادر
 

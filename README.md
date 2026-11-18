@@ -56,10 +56,10 @@ pnpm seed:admin
 
 1. المشروع مربوط بالفعل بحساب Expo `abdalazeezalnadary`، ومعرّفه محفوظ في `app.json`.
 2. أنشئ Personal Access Token في لوحة Expo وقيّده بحساب المشروع وبصلاحية Developer، ثم أضفه في GitHub: **Settings → Secrets and variables → Actions → New repository secret** باسم `EXPO_TOKEN`. لا تضع الرمز في ملف أو سجل أو محادثة.
-3. انشر API وقاعدة بياناته على عنوان HTTPS يمكن للهاتف الوصول إليه، ثم أضف العنوان كـGitHub repository variable باسم `EXPO_PUBLIC_API_URL` (ليس Secret لأنه إعداد عام مضمن في التطبيق). يتحقق الـworkflow من `/api/health` ثم يزامن العنوان كمتغير EAS `preview` من نوع `plaintext`.
-4. بعد إضافة الرمز وعنوان API، شغّل Workflow **Android APK** يدوياً من الفرع `main`. عند اكتمال EAS ستظهر نتيجة البناء ورابط APK.
+3. متغير EAS `preview` باسم `EXPO_PUBLIC_API_URL` مضبوط حالياً على API Manus المؤقت، وقد اجتاز فحص الصحة وقراءة المنيو. هذا عنوان تحويل لبيئة تطوير وقد يتوقف عند خمول البيئة؛ للاختبار الموثوق طويل الأمد، انشر API وقاعدة بيانات على HTTPS ثابت وحدّث متغير EAS، ولا تضعه في GitHub Secret.
+4. بعد إضافة سر `EXPO_TOKEN` والتأكد أن API يعمل، شغّل Workflow **Android APK** يدوياً من الفرع `main`. يقرأ الـworkflow متغير API من EAS ويتحقق من `/api/health` قبل البناء. عند اكتمال EAS ستظهر نتيجة البناء ورابط APK.
 
-لم يبدأ بناء APK بعد؛ لم يُنشر API عام ولم يتوفر عنوانه، كما لم يمكن التحقق من وجود GitHub Secret بسبب صلاحية GitHub الحالية. لذلك يوقف الـworkflow البناء بأمان حتى تكتمل هذه المتطلبات.
+لم يبدأ بناء APK بعد؛ لم يمكن التحقق من وجود GitHub Secret بسبب صلاحية GitHub الحالية. لا تختبر طلبات كتابة على قاعدة البيانات الحية إلا بعد موافقتك، لأن طلبات الاختبار قد تُسجل فيها بيانات فعلية.
 
 ## أوامر مفيدة
 
