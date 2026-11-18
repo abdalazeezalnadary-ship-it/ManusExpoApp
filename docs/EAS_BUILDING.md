@@ -2,24 +2,19 @@
 
 يُنشأ ملف Android قابل للتثبيت عبر ملف `eas.json` في profile `preview`، مع `distribution: internal` و`android.buildType: apk`. هذا يوفّر ملف APK لمشاركته مباشرةً مع هاتف Android؛ ليس إصدار متجر ولا يتطلب وجود حساب مطور Google Play.
 
-## الإعداد الأول مرة واحدة
+## حالة الربط والمتطلبات المتبقية
 
-من مجلد المشروع، باستخدام حساب Expo المالك:
+المشروع مربوط بالفعل بحساب Expo `abdalazeezalnadary` ومعرّف EAS محفوظ في `app.json`. تهيئة Android للـEAS نجحت وجرى التحقق من profile `preview`.
 
-```bash
-pnpm dlx eas-cli@latest login
-pnpm dlx eas-cli@latest init
-```
+أنشئ Personal Access Token من [Expo Access tokens](https://expo.dev/settings/access-tokens)، وفعّل **Limit access** للحساب الشخصي الذي يملك المشروع بدور **Developer**. هذه الصلاحية تكفي لإنشاء builds وإدارة بيانات البناء، والرمز نفسه يظل سرياً؛ لا تلصقه في Git أو المحادثة أو سجلات العمل. أضفه في GitHub تحت **Settings → Secrets and variables → Actions** باسم `EXPO_TOKEN`.
 
-ينشئ `eas init` مشروع EAS ويربطه بتكوين Expo المحلي؛ يضيف `owner` و`extra.eas.projectId` إلى `app.json`. احفظ هذه التغييرات وادفعها إلى الفرع `main`. ثم أضف Personal Access Token كـGitHub Repository Secret اسمه `EXPO_TOKEN` فقط؛ لا تضف الرمز في `app.json` أو `.env.example` أو الشيفرة أو المحادثة.
-
-يجب أن يتوفر عنوان API يستطيع الهاتف الوصول إليه. عيّن `EXPO_PUBLIC_API_URL` في بيئة بناء Expo للـprofile `preview` إلى عنوان HTTPS للخادم الفعلي. هذه قيمة إعداد عامة وليست مفتاح اعتماد. لا يُستخدم `localhost` أو `10.0.2.2` على هاتف فعلي.
+لا يوجد حالياً API عام منشور لهذا المستودع. بعد نشر الـAPI وقاعدة البيانات على HTTPS، أضف عنوان API الأساسي كـGitHub repository variable باسم `EXPO_PUBLIC_API_URL`. عنوان API قيمة عامة تُضمّن في التطبيق، وليس مفتاح اعتماد. يتحقق الـworkflow من استجابة `https://<host>/api/health`، ثم يزامن القيمة إلى متغير EAS `preview` من النوع `plaintext` قبل طلب البناء. لا تستخدم `localhost` أو `10.0.2.2` لهاتف فعلي.
 
 ## تشغيل البناء
 
-في GitHub افتح **Actions → Android APK → Run workflow** على الفرع `main`. ينفذ سير العمل تثبيت الاعتماديات وفحوص TypeScript والاختبارات ثم يطلق EAS بالبناء الداخلي `preview`. يعرض EAS رابط صفحة البناء وملف APK بعد النجاح. افتح رابط APK على الهاتف، نزّل الملف، واسمح بالتثبيت من المتصفح عند طلب Android ذلك.
+بعد إضافة `EXPO_TOKEN` كـSecret و`EXPO_PUBLIC_API_URL` كـVariable، افتح **Actions → Android APK → Run workflow** على الفرع `main`. يتحقق سير العمل من TypeScript والاختبارات، ومن عنوان API وفحص صحته، ثم يزامنه إلى EAS ويطلق بناء `preview` الداخلي. يعرض EAS رابط صفحة البناء وAPK فقط عند النجاح. افتح رابط APK على الهاتف، نزّل الملف، واسمح بالتثبيت من المتصفح عند طلب Android ذلك.
 
-لا يدّعي هذا المستودع أن APK قد بُني بالفعل؛ يلزم أولاً ربط EAS وتوفير الرمز وعنوان API. لا تحفظ مفاتيح توقيع Android في GitHub source؛ يسمح EAS بإدارة بيانات توقيع Android اللازمة للبناء.
+لم يبدأ بناء APK بعد لأن عنوان API العام وGitHub Secret لم يجهزا. لم تحفظ مفاتيح توقيع Android في المصدر؛ يتولى EAS إعداد بيانات التوقيع عند البناء.
 
 ## المصادر
 

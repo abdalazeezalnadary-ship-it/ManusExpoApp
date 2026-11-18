@@ -54,12 +54,12 @@ pnpm seed:admin
 
 ملف `eas.json` يحتوي profile داخلياً باسم `preview` ينتج APK. يوجد سير عمل يدوي في GitHub Actions باسم **Android APK**. قبل تشغيله:
 
-1. اربط المشروع بحساب Expo مرة واحدة من مجلد المشروع باستخدام `pnpm dlx eas-cli@latest init` ثم احفظ `extra.eas.projectId` الذي يضيفه EAS في `app.json` وادفع التغيير.
-2. أضف رمز Expo كـGitHub Repository Secret اسمه `EXPO_TOKEN`؛ لا تكتبه في ملف أو سجل أو محادثة.
-3. اضبط `EXPO_PUBLIC_API_URL` في بيئة بناء Expo على عنوان API الحقيقي. قيمة URL ليست مفتاحاً سرياً، لكن يجب أن تكون عنواناً صالحاً يمكن للهاتف الوصول إليه.
-4. شغّل Workflow **Android APK** يدوياً. عند اكتمال EAS ستظهر نتيجة البناء ورابط APK في سجلات المهمة/لوحة Expo.
+1. المشروع مربوط بالفعل بحساب Expo `abdalazeezalnadary`، ومعرّفه محفوظ في `app.json`.
+2. أنشئ Personal Access Token في لوحة Expo وقيّده بحساب المشروع وبصلاحية Developer، ثم أضفه في GitHub: **Settings → Secrets and variables → Actions → New repository secret** باسم `EXPO_TOKEN`. لا تضع الرمز في ملف أو سجل أو محادثة.
+3. انشر API وقاعدة بياناته على عنوان HTTPS يمكن للهاتف الوصول إليه، ثم أضف العنوان كـGitHub repository variable باسم `EXPO_PUBLIC_API_URL` (ليس Secret لأنه إعداد عام مضمن في التطبيق). يتحقق الـworkflow من `/api/health` ثم يزامن العنوان كمتغير EAS `preview` من نوع `plaintext`.
+4. بعد إضافة الرمز وعنوان API، شغّل Workflow **Android APK** يدوياً من الفرع `main`. عند اكتمال EAS ستظهر نتيجة البناء ورابط APK.
 
-لم يُنشأ رابط APK في هذه النسخة لأن حساب Expo ورمز البناء ومعرّف مشروع EAS وعنوان API العام غير متوفرة في هذه الجلسة. إعداد `eas.json` يجهز ملف البناء فقط ولا يعني أن بناءً قد نجح.
+لم يبدأ بناء APK بعد؛ لم يُنشر API عام ولم يتوفر عنوانه، كما لم يمكن التحقق من وجود GitHub Secret بسبب صلاحية GitHub الحالية. لذلك يوقف الـworkflow البناء بأمان حتى تكتمل هذه المتطلبات.
 
 ## أوامر مفيدة
 
