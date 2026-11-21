@@ -7,7 +7,6 @@ import { useAuth } from "@/hooks/use-auth";
 import { formatYER } from "@/lib/format";
 import { trpc } from "@/lib/trpc";
 
-const ROLES = ["admin", "manager"] as const;
 const STATIONS = [
   { key: "beverages", name: "مشروبات" },
   { key: "salad", name: "سلطات" },
@@ -94,5 +93,5 @@ function MenuContent() {
 }
 
 export default function MenuAdminScreen() {
-  return <RoleGuard roles={ROLES} title="إدارة المنيو"><MenuContent /></RoleGuard>;
+  return <RoleGuard permission="menu.read" title="إدارة المنيو"><MenuContent /></RoleGuard>;
 }

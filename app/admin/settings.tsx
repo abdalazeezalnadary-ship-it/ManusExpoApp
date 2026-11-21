@@ -4,7 +4,6 @@ import { RoleGuard } from "@/components/role-guard";
 import { AppText, Card, Pill, PrimaryButton, SectionHeading } from "@/components/ui";
 import { trpc } from "@/lib/trpc";
 
-const ADMIN_ROLES = ["admin"] as const;
 type Branch = { id: number; name: string };
 type ZoneDraft = { localId: string; code: string; name: string; fee: string; branchId?: number; active: "unset" | "active" | "inactive" };
 type SettingRow = { settingKey: string; value: unknown };
@@ -142,5 +141,5 @@ function SettingsContent() {
 }
 
 export default function AdminSettingsScreen() {
-  return <RoleGuard roles={ADMIN_ROLES} title="إعدادات الإدارة"><SettingsContent /></RoleGuard>;
+  return <RoleGuard permission="admin.manage" title="إعدادات الإدارة"><SettingsContent /></RoleGuard>;
 }

@@ -9,7 +9,6 @@ import { trpc } from "@/lib/trpc";
 import { shortDate } from "@/lib/format";
 import { OsmMap } from "@/components/osm-map";
 
-const TRACK_ROLES = ["user", "customer", "admin", "manager", "cashier", "chef", "waiter", "driver", "accountant", "inventory"] as const;
 type AnyObject = Record<string, any>;
 
 function coordinate(record: AnyObject | null | undefined, keys: string[]): number | null {
@@ -87,5 +86,5 @@ function TrackScreenContent() {
 }
 
 export default function TrackScreen() {
-  return <RoleGuard roles={TRACK_ROLES} title="تتبع الطلب"><TrackScreenContent /></RoleGuard>;
+  return <RoleGuard title="تتبع الطلب"><TrackScreenContent /></RoleGuard>;
 }

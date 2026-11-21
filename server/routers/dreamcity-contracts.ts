@@ -1,16 +1,19 @@
 import { TRPCError } from "@trpc/server";
 
-export const STAFF_ROLES = ["admin", "manager", "cashier", "chef", "waiter", "driver", "inventory"] as const;
-export const REPORT_ROLES = [...STAFF_ROLES, "accountant"] as const;
-
-export function requireRole(role: string, allowed: readonly string[]) {
-  if (!allowed.includes(role)) throw new TRPCError({ code: "FORBIDDEN", message: "غير مصرح بهذا الإجراء." });
-}
-
 export function requireBranchAccess(role: string, userBranchId: number | null, targetBranchId: number) {
+  // The general administrator role is a cross-branch scope boundary; all other roles are branch-bound.
   if (role !== "admin" && userBranchId !== targetBranchId) {
     throw new TRPCError({ code: "FORBIDDEN", message: "لا يمكن الوصول إلى بيانات فرع آخر." });
   }
+}
+
+export function assertBranchCanBeDeactivated(activeOrders: number, activeUsers: number) {
+  if (activeOrders > 0) throw new TRPCError({ code: "CONFLICT", message: "لا يمكن إيقاف فرع لديه طلبات غير مكتملة." });
+  if (activeUsers > 0) throw new TRPCError({ code: "CONFLICT", message: "أوقف حسابات الموظفين المرتبطة بالفرع أولًا." });
+}
+
+export function assertActiveAdminRemains(remainingActiveAdmins: number) {
+  if (remainingActiveAdmins < 1) throw new TRPCError({ code: "CONFLICT", message: "يجب أن يبقى مدير عام نشط واحد على الأقل." });
 }
 
 export function assertUniqueOrderItems(items: readonly { menuItemId?: number; menuItemCode?: string }[]) {

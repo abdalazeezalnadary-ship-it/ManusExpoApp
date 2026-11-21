@@ -5,7 +5,6 @@ import { AppText, Card, Pill, PrimaryButton, SectionHeading } from "@/components
 import { useAuth } from "@/hooks/use-auth";
 import { trpc } from "@/lib/trpc";
 
-const PROMOTION_ROLES = ["admin", "manager"] as const;
 type Branch = { id: number; branchCode: string; name: string };
 type Promotion = {
   id: number;
@@ -35,7 +34,7 @@ function PromotionsContent() {
   const isAdmin = user?.role === "admin";
   const branchesQuery = trpc.branches.list.useQuery(undefined, { retry: false });
   const branches = (branchesQuery.data ?? []) as unknown as Branch[];
-  const managerBranchId = user?.role === "manager" && Number(user.branchId) > 0 ? Number(user.branchId) : null;
+  const managerBranchId = Number(user?.branchId) > 0 ? Number(user?.branchId) : null;
   const [selectedBranchId, setSelectedBranchId] = useState<number | null>(null);
   const targetBranchId = isAdmin ? selectedBranchId : managerBranchId;
   const promotionsQuery = trpc.promotions.list.useQuery(
@@ -156,5 +155,5 @@ function PromotionsContent() {
 }
 
 export default function PromotionsScreen() {
-  return <RoleGuard roles={PROMOTION_ROLES} title="إدارة الكوبونات"><PromotionsContent /></RoleGuard>;
+  return <RoleGuard permission="promotions.read" title="إدارة الكوبونات"><PromotionsContent /></RoleGuard>;
 }

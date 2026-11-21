@@ -6,7 +6,6 @@ import { AppText, Card, PrimaryButton, SectionHeading } from "@/components/ui";
 import { trpc } from "@/lib/trpc";
 import { shortDate } from "@/lib/format";
 
-const FLEET_ROLES = ["admin", "manager"] as const;
 type FleetDriver = {
   driverId: number;
   name: string;
@@ -117,5 +116,5 @@ function FleetContent() {
 }
 
 export default function FleetScreen() {
-  return <RoleGuard roles={FLEET_ROLES} title="أسطول الموصلين"><FleetContent /></RoleGuard>;
+  return <RoleGuard permission="fleet.read" title="أسطول الموصلين"><FleetContent /></RoleGuard>;
 }

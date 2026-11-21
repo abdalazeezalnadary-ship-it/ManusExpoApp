@@ -7,12 +7,11 @@ import * as Sharing from "expo-sharing";
 import { RoleGuard } from "@/components/role-guard";
 import { AppText, Card, Pill, PrimaryButton, SectionHeading } from "@/components/ui";
 import { useAuth } from "@/hooks/use-auth";
+import { usePermissions } from "@/hooks/use-permissions";
 import { CUSTOMER_SERVICE_PHONES, DELIVERY_PHONES } from "@/constants/restaurant";
 import { trpc } from "@/lib/trpc";
 import { formatYER, shortDate } from "@/lib/format";
 
-const SHIFT_ROLES = ["admin", "manager", "cashier", "accountant"] as const;
-const SHIFT_MANAGERS = new Set(["admin", "manager", "cashier"]);
 type Branch = { id: number; branchCode: string; name: string; address?: string };
 type Report = Record<string, any>;
 const inputStyle = { minHeight: 46, borderWidth: 1, borderColor: "#e7e3db", borderRadius: 12, paddingHorizontal: 12, backgroundColor: "#ffffff", color: "#0f172a", textAlign: "right" as const, fontFamily: "Cairo_400Regular" };
@@ -58,6 +57,7 @@ function escapeHtml(value: unknown) { return String(value ?? "").replace(/[&<>"'
 
 function ShiftsContent() {
   const { user } = useAuth();
+  const { can } = usePermissions();
   const branchesQuery = trpc.branches.list.useQuery(undefined as never, { retry: false });
   const branches = (branchesQuery.data ?? []) as unknown as Branch[];
   const ownBranch = branches.find((branch) => branch.id === Number(user?.branchId)) ?? null;
@@ -69,7 +69,7 @@ function ShiftsContent() {
   const [error, setError] = useState("");
   const [exporting, setExporting] = useState(false);
   const isAdmin = user?.role === "admin";
-  const canManageShift = SHIFT_MANAGERS.has(String(user?.role));
+  const canManageShift = can("shifts.manage");
 
   const utils = trpc.useUtils();
   const currentFetcher = (utils.shifts as unknown as { current?: { fetch: () => Promise<unknown> } }).current;
@@ -151,5 +151,5 @@ function ShiftsContent() {
 }
 
 export default function ShiftsScreen() {
-  return <RoleGuard roles={SHIFT_ROLES} title="الورديات والتقارير"><ShiftsContent /></RoleGuard>;
+  return <RoleGuard permission="shifts.manage" title="الورديات والتقارير"><ShiftsContent /></RoleGuard>;
 }

@@ -6,6 +6,7 @@ import { Pressable, ScrollView, View } from "react-native";
 import { RoleGuard } from "@/components/role-guard";
 import { AppText, Card, Pill, PrimaryButton } from "@/components/ui";
 import { useAuth } from "@/hooks/use-auth";
+import { usePermissions } from "@/hooks/use-permissions";
 import { trpc } from "@/lib/trpc";
 import { shortDate } from "@/lib/format";
 
@@ -20,7 +21,6 @@ const STATIONS = [
 ] as const;
 
 const STATION_NAMES: Record<string, string> = Object.fromEntries(STATIONS.filter((station) => station.key !== "all").map((station) => [station.key, station.label]));
-const KDS_ROLES = ["admin", "manager", "chef", "cashier", "waiter"] as const;
 type KdsRow = { orderItem: Record<string, any>; order: Record<string, any>; menuItem: Record<string, any>; chef?: { id: number | null; name: string | null } | null };
 type Chef = { id: number; name: string | null; branchId: number | null };
 
@@ -39,6 +39,7 @@ function escapeHtml(value: unknown) {
 
 function KdsContent() {
   const { user } = useAuth();
+  const { can } = usePermissions();
   const player = useAudioPlayer(require("@/assets/sounds/new-order.wav"));
   const previousItemIds = useRef<Set<number> | null>(null);
   const [station, setStation] = useState<string>("all");
@@ -50,7 +51,7 @@ function KdsContent() {
   const query = trpc.kds.list.useQuery(undefined as never, { refetchInterval: 5_000, retry: false });
   const update = trpc.kds.updateItemStatus.useMutation();
   const assign = trpc.kds.assignChef.useMutation();
-  const chefsQuery = trpc.kds.availableChefs.useQuery(undefined as never, { enabled: user?.role === "admin" || user?.role === "manager", retry: false });
+  const chefsQuery = trpc.kds.availableChefs.useQuery(undefined as never, { enabled: can("kitchen.assign"), retry: false });
   const rows = ((query.data ?? []) as unknown as KdsRow[]).filter((row) => station === "all" || row.orderItem?.station === station);
   const chefs = (chefsQuery.data ?? []) as unknown as Chef[];
   const itemIdsKey = rows.map((row) => Number(row.orderItem?.id)).filter(Number.isFinite).sort((a, b) => a - b).join(",");
@@ -170,9 +171,9 @@ function KdsContent() {
               <AppText style={{ color: "#98a2b3", fontSize: 10, marginTop: 3 }}>{order.createdAt ? shortDate(order.createdAt) : "وقت الإنشاء غير متاح"}</AppText>
               <View style={{ marginTop: 9, gap: 6 }}>
                 <AppText weight="semibold" style={{ color: "#475467", fontSize: 12 }}>الشيف: {row.chef?.name ?? "غير معيّن"}</AppText>
-                {user?.role === "chef" && !item.assignedChefId ? <Pressable onPress={() => void assignChef(Number(item.id))} disabled={assign.isPending} style={{ alignItems: "center", padding: 9, backgroundColor: "#f3f4f6", borderRadius: 10 }}><AppText weight="semibold">تعيين الطلب لنفسي</AppText></Pressable> : null}
-                {(user?.role === "admin" || user?.role === "manager") && itemChefList.length ? <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row-reverse" }}>{itemChefList.map((chef) => <Pill key={chef.id} title={chef.name ?? `شيف ${chef.id}`} selected={Number(item.assignedChefId) === chef.id} onPress={() => void assignChef(Number(item.id), chef.id)} />)}</ScrollView> : null}
-                {(user?.role === "admin" || user?.role === "manager") && chefsQuery.isError ? <AppText style={{ color: "#b42318", fontSize: 11 }}>تعذر تحميل الشيفات المتاحين من الخادم.</AppText> : null}
+                {can("kitchen.assign") && !item.assignedChefId ? <Pressable onPress={() => void assignChef(Number(item.id))} disabled={assign.isPending} style={{ alignItems: "center", padding: 9, backgroundColor: "#f3f4f6", borderRadius: 10 }}><AppText weight="semibold">تعيين الطلب إليّ</AppText></Pressable> : null}
+                {can("kitchen.assign") && itemChefList.length ? <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row-reverse" }}>{itemChefList.map((chef) => <Pill key={chef.id} title={chef.name ?? `شيف ${chef.id}`} selected={Number(item.assignedChefId) === chef.id} onPress={() => void assignChef(Number(item.id), chef.id)} />)}</ScrollView> : null}
+                {can("kitchen.assign") && chefsQuery.isError ? <AppText style={{ color: "#b42318", fontSize: 11 }}>تعذر تحميل الشيفات المتاحين من الخادم.</AppText> : null}
               </View>
               <PrimaryButton title={nextLabel} disabled={disabled} loading={update.isPending} onPress={() => void moveItem(row)} style={{ marginTop: 12 }} />
               <Pressable onPress={() => void printTicket(row)} style={{ alignItems: "center", justifyContent: "center", minHeight: 42, marginTop: 7, borderRadius: 11, borderWidth: 1, borderColor: "#d0d5dd" }}><AppText weight="semibold" style={{ fontSize: 12 }}>طباعة تذكرة المطبخ</AppText></Pressable>
@@ -189,5 +190,5 @@ function KdsContent() {
 }
 
 export default function KdsScreen() {
-  return <RoleGuard roles={KDS_ROLES} title="شاشة المطبخ"><KdsContent /></RoleGuard>;
+  return <RoleGuard permission="kitchen.read" title="شاشة المطبخ"><KdsContent /></RoleGuard>;
 }

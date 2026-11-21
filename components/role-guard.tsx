@@ -2,18 +2,19 @@ import { router } from "expo-router";
 import React from "react";
 import { ActivityIndicator, Pressable, View } from "react-native";
 import { AppText, Card, PrimaryButton } from "@/components/ui";
-import { ROLE_LABELS } from "@/constants/restaurant";
 import { useAuth } from "@/hooks/use-auth";
+import { trpc } from "@/lib/trpc";
 
 type RoleGuardProps = {
-  roles: readonly string[];
+  permission?: string;
   children: React.ReactNode;
   title?: string;
 };
 
 /** UX-only route guard. Every protected operation must still authorize on the server. */
-export function RoleGuard({ roles, children, title = "هذه الشاشة" }: RoleGuardProps) {
+export function RoleGuard({ permission, children, title = "هذه الشاشة" }: RoleGuardProps) {
   const { user, loading } = useAuth();
+  const permissionsQuery = trpc.auth.permissions.useQuery(undefined as never, { enabled: Boolean(user && permission), retry: false });
 
   if (loading) {
     return (
@@ -36,12 +37,17 @@ export function RoleGuard({ roles, children, title = "هذه الشاشة" }: Ro
     );
   }
 
-  if (!roles.includes(user.role ?? "")) {
+  if (permission && permissionsQuery.isLoading) {
+    return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#fffdf8", padding: 24 }}><ActivityIndicator color="#d97706" /><AppText style={{ color: "#667085", marginTop: 10 }}>جارٍ التحقق من صلاحيات الشاشة...</AppText></View>;
+  }
+
+  const hasPermission = !permission || (permissionsQuery.data?.permissions ?? []).includes(permission as never);
+  if (!hasPermission || permission && permissionsQuery.isError) {
     return (
       <View style={{ flex: 1, justifyContent: "center", backgroundColor: "#fffdf8", padding: 20 }}>
         <Card style={{ gap: 10 }}>
           <AppText weight="bold" style={{ fontSize: 20 }}>لا تملك صلاحية هذه الشاشة</AppText>
-          <AppText style={{ color: "#667085", lineHeight: 22 }}>الدور الحالي: {ROLE_LABELS[user.role ?? ""] ?? user.role ?? "غير معروف"}.</AppText>
+          <AppText style={{ color: "#667085", lineHeight: 22 }}>لا يملك الحساب الإذن المطلوب، أو تعذر التحقق من السياسة المحفوظة.</AppText>
           <Pressable onPress={() => router.replace("/(tabs)")} style={{ alignSelf: "flex-start", paddingVertical: 8 }}>
             <AppText weight="semibold" style={{ color: "#d97706" }}>العودة للرئيسية</AppText>
           </Pressable>

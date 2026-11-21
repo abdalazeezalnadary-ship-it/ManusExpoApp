@@ -7,7 +7,6 @@ import { AppText, Card, PrimaryButton } from "@/components/ui";
 import { trpc } from "@/lib/trpc";
 import { formatYER, shortDate } from "@/lib/format";
 
-const DRIVER_ROLES = ["driver"] as const;
 type DriverOrder = Record<string, any>;
 
 function detailLines(value: unknown): [string, string][] {
@@ -163,5 +162,5 @@ function DriverContent() {
 }
 
 export default function DriverScreen() {
-  return <RoleGuard roles={DRIVER_ROLES} title="طلبات الموصل"><DriverContent /></RoleGuard>;
+  return <RoleGuard permission="driver.operate" title="طلبات الموصل"><DriverContent /></RoleGuard>;
 }

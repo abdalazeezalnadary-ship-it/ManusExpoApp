@@ -3,11 +3,10 @@ import { ScrollView, TextInput, View } from "react-native";
 import { RoleGuard } from "@/components/role-guard";
 import { AppText, Card, PrimaryButton, SectionHeading } from "@/components/ui";
 import { useAuth } from "@/hooks/use-auth";
+import { usePermissions } from "@/hooks/use-permissions";
 import { trpc } from "@/lib/trpc";
 import { formatYER, shortDate } from "@/lib/format";
 
-const EXPENSE_ROLES = ["admin", "manager", "cashier", "chef", "waiter", "driver", "inventory", "accountant"] as const;
-const CREATE_ROLES = ["admin", "manager", "cashier", "chef", "waiter", "driver", "inventory"] as const;
 const inputStyle = {
   minHeight: 46,
   borderWidth: 1,
@@ -36,9 +35,10 @@ function normalizeDigits(value: string) {
 
 function ExpensesContent() {
   const { user } = useAuth();
+  const { can } = usePermissions();
   const numericBranchId = Number(user?.branchId);
   const branchId = Number.isSafeInteger(numericBranchId) && numericBranchId > 0 ? numericBranchId : null;
-  const canCreateByRole = CREATE_ROLES.includes(user?.role as (typeof CREATE_ROLES)[number]);
+  const canCreateByRole = can("expenses.create");
   const [amountText, setAmountText] = useState("");
   const [reason, setReason] = useState("");
   const [error, setError] = useState("");
@@ -200,5 +200,5 @@ function ExpensesContent() {
 }
 
 export default function ExpensesScreen() {
-  return <RoleGuard roles={EXPENSE_ROLES} title="مصروفات الفرع"><ExpensesContent /></RoleGuard>;
+  return <RoleGuard permission="finance.read" title="مصروفات الفرع"><ExpensesContent /></RoleGuard>;
 }

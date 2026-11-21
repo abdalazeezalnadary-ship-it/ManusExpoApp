@@ -5,7 +5,6 @@ import { AppText, Card, Pill, PrimaryButton, SectionHeading } from "@/components
 import { useAuth } from "@/hooks/use-auth";
 import { trpc } from "@/lib/trpc";
 
-const INVENTORY_ROLES = ["admin", "manager", "inventory"] as const;
 type Branch = { id: number; branchCode: string; name: string };
 type InventoryItem = Record<string, any>;
 const inputStyle = { minHeight: 46, borderWidth: 1, borderColor: "#e7e3db", borderRadius: 12, paddingHorizontal: 12, backgroundColor: "#ffffff", color: "#0f172a", textAlign: "right" as const, fontFamily: "Cairo_400Regular" };
@@ -87,5 +86,5 @@ function InventoryContent() {
 }
 
 export default function InventoryScreen() {
-  return <RoleGuard roles={INVENTORY_ROLES} title="إدارة المخزون"><InventoryContent /></RoleGuard>;
+  return <RoleGuard permission="inventory.read" title="إدارة المخزون"><InventoryContent /></RoleGuard>;
 }

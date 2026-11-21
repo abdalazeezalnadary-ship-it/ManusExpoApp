@@ -6,7 +6,6 @@ import { RoleGuard } from "@/components/role-guard";
 import { AppText, Card, Pill, PrimaryButton } from "@/components/ui";
 import { trpc } from "@/lib/trpc";
 
-const ROLES = ["admin"] as const;
 type Branch = { id: number; name: string };
 
 function downloadInBrowser(filename: string, contents: string, mimeType: string) {
@@ -101,5 +100,5 @@ function BackupContent() {
 }
 
 export default function BackupScreen() {
-  return <RoleGuard roles={ROLES} title="النسخ الاحتياطي"><BackupContent /></RoleGuard>;
+  return <RoleGuard permission="admin.manage" title="النسخ الاحتياطي"><BackupContent /></RoleGuard>;
 }

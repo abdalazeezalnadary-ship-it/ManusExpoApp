@@ -34,6 +34,8 @@ jobs:
         run: |
           pnpm check
           pnpm test
+          pnpm build:server
+          pnpm build:web
 
       - name: Validate Expo project and bundle
         run: |

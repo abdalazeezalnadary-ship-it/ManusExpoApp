@@ -5,7 +5,6 @@ import { AppText, Card, Pill, PrimaryButton, SectionHeading } from "@/components
 import { useAuth } from "@/hooks/use-auth";
 import { trpc } from "@/lib/trpc";
 
-const RETURN_ROLES = ["admin", "manager"] as const;
 type Branch = { id: number; branchCode: string; name: string };
 type ReturnRow = {
   returnOrder: { id: number; orderId: number; amount: number; reason: string; status: string; createdAt?: Date | string };
@@ -31,7 +30,7 @@ function ReturnsContent() {
   const isAdmin = user?.role === "admin";
   const branchesQuery = trpc.branches.list.useQuery(undefined, { retry: false });
   const branches = (branchesQuery.data ?? []) as unknown as Branch[];
-  const managerBranchId = user?.role === "manager" && Number(user.branchId) > 0 ? Number(user.branchId) : null;
+  const managerBranchId = Number(user?.branchId) > 0 ? Number(user?.branchId) : null;
   const [selectedBranchId, setSelectedBranchId] = useState<number | null>(null);
   const targetBranchId = isAdmin ? selectedBranchId : managerBranchId;
   const returnsQuery = trpc.returns.list.useQuery(
@@ -103,5 +102,5 @@ function ReturnsContent() {
 }
 
 export default function ReturnsScreen() {
-  return <RoleGuard roles={RETURN_ROLES} title="إدارة المرتجعات"><ReturnsContent /></RoleGuard>;
+  return <RoleGuard permission="returns.read" title="إدارة المرتجعات"><ReturnsContent /></RoleGuard>;
 }
